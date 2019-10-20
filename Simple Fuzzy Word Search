@@ -1,0 +1,25 @@
+from difflib import get_close_matches
+
+set_kata = [
+    'Bahagia',
+    'Sedih',
+    'Gundah',
+    'Marah',
+    'Depresi'
+]
+
+kata_kunci = 'Kebanggan'
+result = get_close_matches(kata_kunci, set_kata)
+print(result, "// Kata-kata tidak tersedia dalam set data")
+
+kata_kunci = 'Berbahagia'
+result = get_close_matches(kata_kunci,  set_kata, cutoff=0.4)
+print(result, " //Memberi toleransi kata")
+
+kata_kunci = 'Gudhah'
+result = get_close_matches(kata_kunci, set_kata)
+print(result, " //Memberi toleransi kata")
+
+kata_kunci = 'depresi'
+result = get_close_matches(kata_kunci, set_kata)
+print(result)
